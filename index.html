@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>러쉬 34주년 체육대회</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--sky1:#bfe3f7;--sky2:#e6f5fd;--card:#fff;--ink:#16223f;--navy:#14275a;--blue:#4aa3dc;--line:#8ec8ea;--grass:#7cc65a;--grass2:#5fae45;--red:#e8433f;--sun:#ffd54a;--muted:#5a6b8c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sky1:#12284a;--sky2:#0e1c36;--card:#1a2c52;--ink:#eaf3ff;--navy:#9fd0ff;--line:#3b6ea5;--muted:#a9bcdb}}
+:root[data-theme="dark"]{--sky1:#12284a;--sky2:#0e1c36;--card:#1a2c52;--ink:#eaf3ff;--navy:#9fd0ff;--line:#3b6ea5;--muted:#a9bcdb}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--sky2);color:var(--ink);font-family:'Noto Sans KR',system-ui,sans-serif;line-height:1.6}
+h1,h2,h3,.jua{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+a{color:inherit}
+/* hero */
+.hero{background:linear-gradient(var(--sky1),var(--sky2));text-align:center;padding:34px 0 0;position:relative;overflow:hidden}
+.cloud{position:absolute;background:#fff;border-radius:60px;opacity:.9;height:34px;width:120px}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud:before{width:54px;height:54px;left:16px;top:-26px}.cloud:after{width:44px;height:44px;left:60px;top:-18px}
+.c1{left:4%;top:60px}.c2{right:6%;top:150px;transform:scale(.8)}
+.badge{position:absolute;right:16px;top:16px;width:84px;height:84px;border-radius:50%;background:#fff;border:3px solid var(--blue);color:var(--blue);display:grid;place-content:center;font-weight:900;font-size:11px;line-height:1.1}
+.badge b{font-size:28px;display:block}
+h1{font-size:clamp(40px,9vw,76px);margin:8px 0 14px;color:#2f7fb5;line-height:1.1;-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 4px 0 rgba(20,39,90,.25)}
+h1 span{color:#7ab648}
+.ribbon{display:inline-block;background:#fff;color:#16223f;border:2px solid var(--navy);padding:6px 22px;margin:4px 0;font-weight:900;font-size:clamp(15px,3.6vw,22px);position:relative;border-radius:4px}
+.ribbon:before,.ribbon:after{content:"";position:absolute;top:8px;width:18px;height:100%;background:#9fd0f0;border:2px solid var(--navy);z-index:-1}
+.ribbon:before{left:-14px}.ribbon:after{right:-14px}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-family:'Jua',sans-serif;font-size:22px;padding:12px 30px;border-radius:40px;border:3px solid #fff;box-shadow:0 5px 0 #a82a27,0 8px 16px rgba(0,0,0,.2);margin:18px 0}
+.btn:active{transform:translateY(3px)}
+.dday{font-weight:900;color:var(--navy);margin-top:4px}
+.scene{display:block;width:100%;max-width:980px;margin:0 auto;border-radius:24px 24px 0 0;border:3px solid var(--line);border-bottom:0}
+.hill{height:26px;background:var(--grass);}
+/* sections */
+section{padding:44px 0}
+h2{font-size:clamp(28px,6vw,40px);color:var(--navy);margin:0 0 6px;text-align:center}
+.sub{text-align:center;color:var(--muted);margin:0 0 24px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{background:var(--card);border:3px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 5px 0 var(--line)}
+.info{text-align:center}.info .ic{font-size:34px}.info h3{margin:2px 0;font-size:22px;color:var(--navy)}.info p{margin:0;font-weight:700}
+/* timeline */
+.tl{list-style:none;margin:0 auto;padding:0;max-width:640px;position:relative}
+.tl:before{content:"";position:absolute;left:62px;top:6px;bottom:6px;border-left:4px dashed var(--line)}
+.tl li{display:flex;gap:14px;align-items:center;margin:0 0 12px;position:relative}
+.tl time{width:52px;font-weight:900;color:var(--blue);font-size:15px;text-align:right;flex:none}
+.tl .dot{width:22px;height:22px;border-radius:50%;background:var(--sun);border:3px solid var(--navy);flex:none;z-index:1}
+.tl .box{flex:1;background:var(--card);border:3px solid var(--line);border-radius:16px;padding:10px 14px;font-weight:700}
+.tl .box small{display:block;color:var(--muted);font-weight:500}
+.tl .lunch .box{background:#fff4c9;color:#16223f;border-color:#f1c232}
+.tl .party .dot{background:var(--red)}
+.note{max-width:640px;margin:18px auto 0;background:#fff4c9;color:#16223f;border:3px dashed #f1c232;border-radius:18px;padding:14px 18px;font-weight:700}
+/* shirt */
+.shirt{display:grid;gap:20px;align-items:center;grid-template-columns:1fr 1fr}
+.shirt img{width:100%;border-radius:18px;border:3px solid var(--line)}
+.shirt h3{font-size:26px;color:var(--navy);margin:0 0 8px}
+.tag{display:inline-block;background:#222;color:#fff;border-radius:20px;padding:2px 14px;font-weight:900;margin-right:6px}.tag.w{background:#fff;color:#222;border:2px solid #222}
+small.dim{color:var(--muted)}
+.warn{background:#fff0ef;color:#9b1c18;border:3px solid var(--red);border-radius:16px;padding:12px 16px;font-weight:900;margin:12px 0}
+.warn b{background:var(--red);color:#fff;border-radius:8px;padding:1px 8px;margin-right:6px}
+.warn.top{display:inline-block;margin:6px auto 0;font-size:15px;padding:8px 16px}
+/* missions */
+.common{background:var(--red);color:#fff;border-radius:16px;padding:10px 16px;text-align:center;font-weight:900;margin:0 auto 22px;max-width:640px}
+.mission{padding:0;overflow:hidden;position:relative}
+.mission img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-bottom:3px solid var(--line);background:#fff}
+.mission .b{padding:14px 16px 16px}
+.mission h3{margin:0;font-size:23px;color:var(--navy)}
+.no{position:absolute;left:10px;top:10px;background:var(--navy);color:#fff;border-radius:50%;width:34px;height:34px;display:grid;place-content:center;font-weight:900}
+.pt{position:absolute;right:10px;top:10px;background:var(--sun);color:#16223f;border:3px solid var(--navy);border-radius:20px;padding:0 12px;font-family:'Jua',sans-serif;font-size:20px}
+.mission p{margin:6px 0;font-size:15px}.mission .m{background:var(--sky2);border-radius:10px;padding:6px 10px;font-size:14px;font-weight:700}
+.cta{text-align:center;background:linear-gradient(var(--sky2),var(--sky1))}
+footer{background:var(--grass2);color:#fff;text-align:center;padding:22px 18px;font-weight:700}
+@media(max-width:620px){.shirt{grid-template-columns:1fr}.badge{width:68px;height:68px;font-size:9px}.badge b{font-size:21px}.tl:before{left:58px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="cloud c1"></div><div class="cloud c2"></div>
+  <div class="badge"><div>RUSH<b>34<sup style="font-size:11px">th</sup></b>Anniversary</div></div>
+  <div class="wrap">
+    <h1>러쉬 34주년<br><span>체육대회</span></h1>
+    <div class="ribbon">일시 : 2026. 10. 31 (토) 11:30 ~ 16:00</div><br>
+    <div class="ribbon">장소 : 뚝섬한강공원 인조잔디 축구장</div><br>
+    <a class="btn" href="https://forms.gle/5iMRZ98Etc68gLeN8" target="_blank" rel="noopener">✏️ 참가 · 티셔츠 신청하기</a>
+    <br><div class="warn top"><b>⚠️ 주의</b>티셔츠 제작을 위해 ~10/11(일)까지 신청 받아요!</div>
+    <div class="dday" id="dday"></div>
+  </div>
+  <img class="scene" src="images/img1.jpg" alt="체육대회 일러스트" style="margin-top:14px">
+  <div class="hill"></div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>📣 행사 안내</h2>
+    <p class="sub">YB, OB가 교류하는 가장 큰 행사인 만큼 많은 참여 부탁드립니다!</p>
+    <div class="grid">
+      <div class="card info"><div class="ic">📅</div><h3>일시</h3><p>10월 31일 (토)</p></div>
+      <div class="card info"><div class="ic">⏰</div><h3>집합</h3><p>11:30</p></div>
+      <div class="card info"><div class="ic">🏃</div><h3>행사</h3><p>12:00 ~ 16:00</p></div>
+      <div class="card info"><div class="ic">📍</div><h3>장소</h3><p>뚝섬한강공원<br>인조잔디 축구장</p></div>
+      <div class="card info"><div class="ic">🍻</div><h3>뒤풀이</h3><p>이항아<br>18:00</p><small class="dim">최근 리모델링 완료</small></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--sky1)">
+  <div class="wrap">
+    <h2>🗓 타임테이블</h2>
+    <p class="sub">흑 / 백 두 팀으로 나눠 진행해요</p>
+    <ul class="tl">
+      <li><time>11:30</time><span class="dot"></span><div class="box">집합 · 팀 확인</div></li>
+      <li><time>12:00</time><span class="dot"></span><div class="box">개회식 · 준비운동</div></li>
+      <li><time>12:20</time><span class="dot"></span><div class="box">🔺 꼬깔 쓰고 판 뒤집기</div></li>
+      <li><time>12:40</time><span class="dot"></span><div class="box">🪢 줄다리기</div></li>
+      <li class="lunch"><time>13:10</time><span class="dot"></span><div class="box">🍱 점심시간<small>📸 컨셉 사진 촬영 타임</small></div></li>
+      <li><time>14:10</time><span class="dot"></span><div class="box">🏐 피구</div></li>
+      <li><time>14:40</time><span class="dot"></span><div class="box">🏃 릴레이 달리기</div></li>
+      <li><time>15:10</time><span class="dot"></span><div class="box">⚽ 축구</div></li>
+      <li><time>15:50</time><span class="dot"></span><div class="box">🏆 시상 · 단체사진</div></li>
+      <li class="party"><time>18:00</time><span class="dot"></span><div class="box">🍻 뒤풀이 (이항아)</div></li>
+    </ul>
+    <div class="note">📸 상시 진행 : 경기에 참가하지 않을 때나 점심시간에는 컨셉 사진을 찍어요! 아래 추가점수 미션을 확인하세요.<br><small>※ 시간은 현장 상황에 따라 바뀔 수 있어요.</small></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>👕 단체 티셔츠</h2>
+    <p class="sub">신청 및 구매는 구글폼에서!</p>
+    <div class="card shirt">
+      <img src="images/img2.jpg" alt="흑팀 백팀 티셔츠">
+      <div>
+        <h3><span class="tag">흑</span><span class="tag w">백</span> 팀 진행</h3>
+        <div class="warn"><b>⚠️ 주의</b>티셔츠 제작을 위해 ~10/11(일)까지 신청 받는 점 주의해주세요!</div>
+        <p>지정된 팀에 따라 티셔츠 색상이 결정돼요.</p>
+        <p>러쉬 매니저 신지혜님이 밤을 새워 직접 디자인했어요.</p>
+        <a class="btn" style="font-size:18px;padding:9px 22px" href="https://forms.gle/5iMRZ98Etc68gLeN8" target="_blank" rel="noopener">구글폼 신청</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--sky1)">
+  <div class="wrap">
+    <h2>📸 추가점수 사진 미션</h2>
+    <p class="sub">컨셉 사진을 찍고 추가 점수를 받아가세요!</p>
+    <div class="common">공통 조건 : 모든 사진에는 반드시 OB 인원이 참여해야 인정됩니다</div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+      <div class="card mission"><span class="no">1</span><span class="pt">200점</span><img src="images/img3.jpg" alt=""><div class="b"><h3>누워서 원형포즈</h3><p>위에서 내려 찍는 구도. 사람들이 원형으로 연결되어 보이도록 배치.</p><div class="m">💡 7명 이상이면 +100점</div></div></div>
+      <div class="card mission"><span class="no">2</span><span class="pt">100점</span><img src="images/img4.jpg" alt=""><div class="b"><h3>7명 이상 단체점프샷</h3><p>7명 이상이 동시에 점프. 팔 동작을 크게 하고 표정·동작을 통일하면 좋음.</p><div class="m">💡 전 인원 발이 떨어져 있어야 인정</div></div></div>
+      <div class="card mission"><span class="no">3</span><span class="pt">200점</span><img src="images/img5.jpg" alt=""><div class="b"><h3>인간 피라미드</h3><p>안전한 낮은 자세로 구성. 무리한 높이 금지, 인원 간 균형 중요.</p><div class="m">💡 안전하게 촬영!</div></div></div>
+      <div class="card mission"><span class="no">4</span><span class="pt">100점</span><img src="images/img6.jpg" alt=""><div class="b"><h3>촬영각도 착시효과</h3><p>거리감과 촬영각도를 이용해 손바닥 위에 사람이 올라간 것처럼 연출.</p><div class="m">💡 손바닥에 잘 맞게끔 신경 써서 촬영</div></div></div>
+      <div class="card mission"><span class="no">5</span><span class="pt">200점</span><img src="images/img7.jpg" alt=""><div class="b"><h3>천지창조</h3><p>손끝이 닿을 듯 말 듯한 구도. 아련한 표정연기가 꼭 필요.</p><div class="m">💡 표정연기 없이 웃고 있으면 감점</div></div></div>
+      <div class="card mission"><span class="no">6</span><span class="pt">300점</span><img src="images/img8.jpg" alt=""><div class="b"><h3>레전드 자쿰사진</h3><p>앞뒤로 겹쳐 팔을 층층이 펼치는 포즈. 반드시 도전 항목!</p><div class="m">💡 기본 200점 · 인상 쓰지 않고 편안한 표정이면 300점</div></div></div>
+      <div class="card mission"><span class="no">7</span><span class="pt">200점</span><img src="images/img9.jpg" alt=""><div class="b"><h3>충격파 사진</h3><p>팀원 중 가장 왕고(나이) 인원이 가운데 배치.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>함께 땀 흘리고 웃어요! 🎉</h2>
+    <p class="sub">늦지 않게 11시 30분까지 집합해 주세요. 쌀쌀할 수 있으니 편한 복장·운동화·따뜻한 겉옷 챙겨오세요.</p>
+    <div class="warn" style="max-width:560px;margin:0 auto"><b>⚠️ 주의</b>티셔츠 제작을 위해 ~10/11(일)까지 신청 받는 점 주의해주세요!</div>
+    <a class="btn" href="https://forms.gle/5iMRZ98Etc68gLeN8" target="_blank" rel="noopener">✏️ 지금 신청하기</a>
+  </div>
+</section>
+<footer>RUSH 34th Anniversary · SINCE 1992</footer>
+<script>
+(function(){var t=new Date("2026-10-31T11:30:00+09:00"),n=new Date(),d=Math.ceil((t-n)/864e5),e=document.getElementById("dday");
+e.textContent=d>1?"D-"+d:d===1||d===0?"D-DAY 🎉":"";})();
+</script>
+</body>
+</html>
